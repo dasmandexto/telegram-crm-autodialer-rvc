@@ -1,20 +1,25 @@
-@echo off
+﻿@echo off
 chcp 65001 > nul
-setlocal enabledelayedexpansion
-title TeleDial RVC CRM - Единый интерфейс (Windows)
+title TeleDial RVC CRM - Unified Interface (Windows)
 
 cd /d "%~dp0"
 
 echo =====================================================================
-echo         TeleDial RVC CRM — Запуск единого сервера (Фронт + Бэк)
+echo         TeleDial RVC CRM — Запуск единого сервера
 echo =====================================================================
 echo.
 
+if exist ".venv\Scripts\python.exe" goto START_SERVER
+
+echo [!] Виртуальное окружение не найдено. Выполняем установку...
+call install.bat
 if not exist ".venv\Scripts\python.exe" (
-    echo [!] Виртуальное окружение не найдено. Выполняем авто-установку...
-    call install.bat
+    echo [ОШИБКА] Установка не удалась.
+    pause
+    exit /b 1
 )
 
+:START_SERVER
 set PYTHONPATH=%cd%\backend
 set HOST=0.0.0.0
 set PORT=8000

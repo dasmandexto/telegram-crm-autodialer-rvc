@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 chcp 65001 > nul
 echo ====================================================
 echo   TeleDial CRM - Запуск Vite React 19 Фронтенда
