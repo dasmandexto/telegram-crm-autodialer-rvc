@@ -1,0 +1,7 @@
+{
+  "name": "TeleDial CRM - Cold Calling for Telegram",
+  "description": "Современная CRM-система для холодных звонков через Telegram с управлением очередью, пост-вызовным окном, интерактивным календарем и мульти-аккаунтами.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

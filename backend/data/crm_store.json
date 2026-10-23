@@ -1,0 +1,407 @@
+{
+  "contacts": [
+    {
+      "id": "c-1",
+      "target": "@dmitriy_b2b",
+      "name": "Дмитрий Волков",
+      "company": "Logistics Pro",
+      "status": "pending"
+    },
+    {
+      "id": "c-2",
+      "target": "+79261234567",
+      "name": "Алексей Смирнов",
+      "company": "FinTech Cloud",
+      "status": "pending"
+    },
+    {
+      "id": "c-3",
+      "target": "@olga_marketing",
+      "name": "Ольга Кузнецова",
+      "company": "MediaGroup Digital",
+      "status": "pending"
+    },
+    {
+      "id": "c-4",
+      "target": "+79165554321",
+      "name": "Михаил Соколов",
+      "company": "E-com Retail Hub",
+      "status": "pending"
+    },
+    {
+      "id": "c-5",
+      "target": "@sergey_director",
+      "name": "Сергей Морозов",
+      "company": "СтройКомплект",
+      "status": "pending"
+    },
+    {
+      "id": "c-6",
+      "target": "+79037778899",
+      "name": "Елена Васильева",
+      "company": "ИнвестКапитал",
+      "status": "pending"
+    },
+    {
+      "id": "c-7",
+      "target": "@pavel_techlead",
+      "name": "Павел Новиков",
+      "company": "SaaS Platform",
+      "status": "pending"
+    }
+  ],
+  "accounts": [
+    {
+      "id": "acc-1",
+      "phone": "+7 999 444-12-01",
+      "username": "@hunter_sales_1",
+      "displayName": "Sales Account Alpha",
+      "avatarColor": "bg-emerald-600",
+      "dailyCallLimit": 35,
+      "callsToday": 22,
+      "status": "active",
+      "proxy": "SOCKS5: 185.122.90.14:1080 (RU)",
+      "sessionFile": "session_alpha_1.session"
+    },
+    {
+      "id": "acc-2",
+      "phone": "+7 999 444-12-02",
+      "username": "@hunter_sales_2",
+      "displayName": "Sales Account Beta",
+      "avatarColor": "bg-blue-600",
+      "dailyCallLimit": 35,
+      "callsToday": 24,
+      "status": "active",
+      "proxy": "SOCKS5: 185.122.90.15:1080 (RU)",
+      "sessionFile": "session_beta_2.session"
+    },
+    {
+      "id": "acc-3",
+      "phone": "+7 999 444-12-03",
+      "username": "@hunter_sales_3",
+      "displayName": "Sales Account Gamma",
+      "avatarColor": "bg-purple-600",
+      "dailyCallLimit": 35,
+      "callsToday": 6,
+      "status": "warming",
+      "proxy": "SOCKS5: 185.122.90.16:1080 (RU)",
+      "sessionFile": "tdata_gamma_folder"
+    }
+  ],
+  "templates": [
+    {
+      "id": "tpl-1",
+      "title": "Коммерческое предложение (с изображением КП)",
+      "category": "Пост-звонок",
+      "content": "{Здравствуйте|Добрый день|Приветствую}, {имя}! {Договорились на созвоне|Как и обсуждали во время звонка} в Telegram. {Направляю|Прикрепляю|Высылаю} краткую презентацию и расчет окупаемости для вашей компании: https://teledial.crm/proposal/{id}\n{Буду рад ответить на любые вопросы!|С удовольствием отвечу на детали в удобное время!}",
+      "mediaAttachment": {
+        "type": "image",
+        "name": "КП_Презентация_Тарифов.png",
+        "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80",
+        "sizeKb": 245
+      }
+    },
+    {
+      "id": "tpl-2",
+      "title": "Не дозвонился — голосовая аудио-заметка",
+      "category": "Дозвон",
+      "content": "{Добрый день|Здравствуйте|Приветствую}, {имя}! {Не удалось до вас дозвониться|Пытался набрать вас по аудио}. {Записал краткое голосовое сообщение на 20 секунд|Прикрепляю короткую аудио-заметку с сутью предложения}. {Подскажите, в какое время вам удобно созвониться на 5 минут?|Буду очень признателен за обратную связь!}",
+      "mediaAttachment": {
+        "type": "audio",
+        "name": "Голосовое_сообщение_менеджера.mp3",
+        "url": "https://actions.google.com/sounds/v1/ambient/rain_heavy.ogg",
+        "sizeKb": 180
+      }
+    },
+    {
+      "id": "tpl-3",
+      "title": "Подтверждение запланированного созвона (с видео-демо)",
+      "category": "Встречи",
+      "content": "{Добрый день|Здравствуйте|Привет}, {имя}! {Фиксирую нашу договоренность на созвон {время}|Подтверждаю встречу {время}}. {Прикрепляю короткое минутное видео о возможностях CRM|Посмотрите минутный видео-обзор перед созвоном}: https://teledial.crm/demo",
+      "mediaAttachment": {
+        "type": "video",
+        "name": "Видео_обзор_платформы.mp4",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+        "sizeKb": 1420
+      }
+    },
+    {
+      "id": "tpl-4",
+      "title": "Благодарность за диалог (GIF-стикер)",
+      "category": "Лояльность",
+      "content": "{Отличного дня|Хорошей рабочей недели}, {имя}! {Спасибо за приятный диалог на созвоне|Рад был познакомиться}. {Всегда на связи в Telegram!|Если возникнут любые вопросы — сразу пишите сюда!}",
+      "mediaAttachment": {
+        "type": "gif",
+        "name": "Спасибо_за_звонок.gif",
+        "url": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp1aHk3Zjh3b2V1ZjlhNHlhZDF2OG10ZXd5eGttOTRraDJ6cWphdyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7TKSjRrfIPjeiVyM/giphy.gif",
+        "sizeKb": 380
+      }
+    }
+  ],
+  "reminders": [
+    {
+      "id": "rem-1",
+      "contactTarget": "@dmitriy_b2b",
+      "contactName": "Дмитрий Волков (Logistics Pro)",
+      "dateTime": "2026-10-23T10:00",
+      "durationMinutes": 30,
+      "notes": "Повторный звонок по согласованию договора на пилотный запуск",
+      "account": "@hunter_sales_1",
+      "completed": false
+    },
+    {
+      "id": "rem-2",
+      "contactTarget": "+79165554321",
+      "contactName": "Михаил Соколов (Retail Hub)",
+      "dateTime": "2026-10-23T14:30",
+      "durationMinutes": 30,
+      "notes": "Демонстрация работы CRM и выгрузки базы контактов",
+      "account": "@hunter_sales_2",
+      "completed": false
+    },
+    {
+      "id": "rem-3",
+      "contactTarget": "@sergey_director",
+      "contactName": "Сергей Морозов (СтройКомплект)",
+      "dateTime": "2026-10-23T16:00",
+      "durationMinutes": 45,
+      "notes": "Обсуждение интеграции с их текущей базой 1С",
+      "account": "@hunter_sales_1",
+      "completed": false
+    }
+  ],
+  "inbox": [
+    {
+      "id": "inb-1",
+      "type": "message",
+      "client": "@dmitriy_b2b",
+      "clientName": "Дмитрий Волков",
+      "account": "@hunter_sales_1",
+      "timestamp": "14:22",
+      "previewText": "Изучил ваше КП. Давайте согласуем созвон с техническим директором.",
+      "read": false
+    },
+    {
+      "id": "inb-2",
+      "type": "missed_call",
+      "client": "+79037778899",
+      "clientName": "Елена Васильева",
+      "account": "@hunter_sales_2",
+      "timestamp": "12:45",
+      "previewText": "Входящий аудиовызов (12 сек, без ответа)",
+      "read": false
+    }
+  ],
+  "history": [
+    {
+      "id": "hist-1",
+      "dateTime": "2026-10-22 16:45:12",
+      "target": "+79261234567",
+      "clientName": "Алексей Смирнов",
+      "company": "FinTech Cloud",
+      "outcome": "успешно",
+      "clientStatus": "заинтересован (горячий)",
+      "clientStatusId": "status_interested_hot",
+      "clientStatusGroup": "Горячие",
+      "clientStatusColor": "emerald",
+      "durationSeconds": 142,
+      "notes": "Очень заинтересованы в Telegram-автодозвоне для отдела продаж. Договорились о созвоне завтра.",
+      "message": {
+        "sent": true,
+        "text": "Алексей, добрый день! Направляю презентацию: https://teledial.crm/proposal/482",
+        "templateTitle": "Коммерческое предложение (с изображением КП)",
+        "sentAt": "16:48"
+      },
+      "accountUsed": "@hunter_sales_1",
+      "proxyUsed": "SOCKS5 #1 (185.122.90.14:1080 RU)",
+      "syncedToGoogleSheets": true,
+      "hasAudioRecord": true,
+      "recordingId": "rec-1"
+    }
+  ],
+  "client_statuses": [
+    {
+      "id": "status_refused_contact",
+      "label": "отказался но на контакт идёт",
+      "color": "amber",
+      "group": "Отказ (с шансом)",
+      "description": "Отказ от прямого оффера, но готов к переписке и обсуждению деталей",
+      "isDefault": true
+    },
+    {
+      "id": "status_toxic_histeric",
+      "label": "истеричка",
+      "color": "rose",
+      "group": "Сложные клиенты",
+      "description": "Эмоциональный срыв, негатив, неадекватная реакция на звонок",
+      "isDefault": true
+    },
+    {
+      "id": "status_no_answer",
+      "label": "не ответил",
+      "color": "slate",
+      "group": "Недозвон",
+      "description": "Гудки без ответа, сброс до поднятия трубки",
+      "isDefault": true
+    },
+    {
+      "id": "status_privacy_closed",
+      "label": "закрыты настройки",
+      "color": "purple",
+      "group": "Приватность",
+      "description": "Запрет входящих звонков от неизвестных в настройках Telegram",
+      "isDefault": true
+    },
+    {
+      "id": "status_interested_hot",
+      "label": "заинтересован (горячий)",
+      "color": "emerald",
+      "group": "Горячие",
+      "description": "Прямой интерес, запросил КП, прайс или расчет окупаемости",
+      "isDefault": true
+    },
+    {
+      "id": "status_call_scheduled",
+      "label": "согласован созвон",
+      "color": "sky",
+      "group": "Встречи",
+      "description": "Зафиксировано точное время повторного звонка или демо-презентации",
+      "isDefault": true
+    },
+    {
+      "id": "status_spamblock_invalid",
+      "label": "спамблок / неверный контакт",
+      "color": "orange",
+      "group": "Невалидные",
+      "description": "Удаленный профиль, спамблок или неверный номер",
+      "isDefault": true
+    }
+  ],
+  "recordings": [
+    {
+      "id": "rec-1792730001",
+      "callId": "call_1792730001_acc-1",
+      "title": "Запись: @test_lead",
+      "clientTarget": "@test_lead",
+      "clientName": "@test_lead",
+      "dateTime": "2026-10-23 07:33",
+      "durationSeconds": 1,
+      "mode": "FULL_CALL_MIX",
+      "rvcVoiceName": "voice_male_deep",
+      "rvcPitch": -4,
+      "audioBlobUrl": "/api/recordings/rec-1792730001/download",
+      "fileSizeBytes": 32044
+    },
+    {
+      "id": "rec-1792729878",
+      "callId": "call_1792729878_acc-1",
+      "title": "Запись: @test_lead",
+      "clientTarget": "@test_lead",
+      "clientName": "@test_lead",
+      "dateTime": "2026-10-23 07:31",
+      "durationSeconds": 1,
+      "mode": "FULL_CALL_MIX",
+      "rvcVoiceName": "voice_male_deep",
+      "rvcPitch": -4,
+      "audioBlobUrl": "/api/recordings/rec-1792729878/download",
+      "fileSizeBytes": 32044
+    },
+    {
+      "id": "rec-1792728027",
+      "callId": "call_1792728027_acc-1",
+      "title": "Запись: @test_lead",
+      "clientTarget": "@test_lead",
+      "clientName": "@test_lead",
+      "dateTime": "2026-10-23 07:00",
+      "durationSeconds": 1,
+      "mode": "FULL_CALL_MIX",
+      "rvcVoiceName": "voice_male_deep",
+      "rvcPitch": -4,
+      "audioBlobUrl": "/api/recordings/rec-1792728027/download",
+      "fileSizeBytes": 32044
+    },
+    {
+      "id": "rec-1792727972",
+      "callId": "call_1792727972_acc-1",
+      "title": "Запись: @test_lead",
+      "clientTarget": "@test_lead",
+      "clientName": "@test_lead",
+      "dateTime": "2026-10-23 06:59",
+      "durationSeconds": 1,
+      "mode": "FULL_CALL_MIX",
+      "rvcVoiceName": "voice_male_deep",
+      "rvcPitch": -4,
+      "audioBlobUrl": "/api/recordings/rec-1792727972/download",
+      "fileSizeBytes": 32044
+    },
+    {
+      "id": "rec-1",
+      "callId": "call_mock_1",
+      "title": "Запись: Алексей Смирнов (+79261234567)",
+      "clientTarget": "+79261234567",
+      "clientName": "Алексей Смирнов",
+      "dateTime": "2026-10-22 16:45",
+      "durationSeconds": 142,
+      "mode": "FULL_CALL_MIX",
+      "rvcVoiceName": "Male_Deep (Баритон / Шеф)",
+      "rvcPitch": -4,
+      "fileSizeBytes": 4544000
+    }
+  ],
+  "settings": {
+    "dailyCallLimitPerAccount": 35,
+    "autoRotateAccounts": true,
+    "autoNextCallDelaySeconds": 5,
+    "soundEnabled": true,
+    "proxyRotationEnabled": true,
+    "currentProxyIndex": 0,
+    "proxies": [
+      {
+        "id": "prx-1",
+        "url": "socks5://user:pass@185.122.90.14:1080",
+        "label": "SOCKS5 #1 (185.122.90.14 RU)",
+        "country": "RU",
+        "pingMs": 35,
+        "status": "active",
+        "callsCount": 18
+      },
+      {
+        "id": "prx-2",
+        "url": "socks5://user:pass@185.122.90.15:1080",
+        "label": "SOCKS5 #2 (185.122.90.15 RU)",
+        "country": "RU",
+        "pingMs": 42,
+        "status": "active",
+        "callsCount": 24
+      }
+    ],
+    "googleSheets": {
+      "webhookUrl": "https://script.google.com/macros/s/AKfycbx_mock_webhook/exec",
+      "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit",
+      "sheetName": "База_Позвонивших",
+      "autoSyncOnCallFinish": true,
+      "lastSyncTime": null,
+      "syncedCount": 14
+    },
+    "rvcConfig": {
+      "rawSshCommand": "ssh -N -L 8888:127.0.0.1:9000 -L 8889:127.0.0.1:9001 -p 25411 root@194.168.1.10",
+      "serverIp": "194.168.1.10",
+      "sshPort": 25411,
+      "localRvcPort": 8889,
+      "remoteRvcPort": 9001,
+      "localVideoPort": 8888,
+      "remoteVideoPort": 9000,
+      "status": "online",
+      "pingMs": 32,
+      "lastConnectedAt": null
+    },
+    "rvcSettings": {
+      "pitch": 6,
+      "indexRate": 0.8,
+      "protect": 0.25,
+      "activeVoiceId": "voice_female_soft",
+      "isSwitching": false
+    },
+    "defaultRecordMode": "FULL_CALL_MIX"
+  }
+}
